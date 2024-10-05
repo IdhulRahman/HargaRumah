@@ -17,8 +17,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load model and data
-model = load_model('model\model_harga_rumah1.pkl')
-data = load_data('data\Final_data.csv')
+model = load_model('model/model_harga_rumah1.pkl')
+data = load_data('data/Final_data.csv')
 
 # Extract unique cities and districts from the data
 unique_cities = data['city'].unique()
