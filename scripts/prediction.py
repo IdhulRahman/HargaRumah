@@ -31,8 +31,9 @@ def predict_price(model, input_data):
     price_prediction = int(price_prediction[0])  # Convert to integer
 
     # Calculate the price range
-    margin = price_prediction * 0.15  # 15% margin
-    lower_bound = int(price_prediction - margin)
-    upper_bound = int(price_prediction + margin)
+    margin_lower = price_prediction * 0.15  # 15% margin
+    margin_upper = price_prediction * 0.25  # 15% margin
+    lower_bound = int(price_prediction - margin_lower)
+    upper_bound = int(price_prediction + margin_upper)
 
     return lower_bound, price_prediction, upper_bound  # Return as a tuple
